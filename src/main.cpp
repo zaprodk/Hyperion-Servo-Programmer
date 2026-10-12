@@ -162,6 +162,12 @@ const char index_html[] PROGMEM = R"rawliteral(
       </fieldset>
     </div>
   </div>
+
+  <div style="margin-top: 15px; text-align: center; border-top: 1px solid #808080; padding-top: 10px;">
+    <b style="font-size: 12px; color: #333;">Multiplex USB Adapter Wiring Diagram:</b><br>
+    <img src="https://wiki.rc-network.de/w/images/0/04/Mpxprog.png" style="width: 100%; max-width: 550px; height: auto; margin-top: 8px; border: 1px solid #808080; background: #fff;" alt="Multiplex Adapter Schematic"><br>
+    <a href="https://wiki.rc-network.de/wiki/Multiplex_USB-Adapter" target="_blank" style="font-size: 11px; color: #003399; text-decoration: underline; display: inline-block; margin-top: 5px;">Multiplex USB-Adapter Wiki Page</a>
+  </div>
 </div>
 
 <script>
@@ -260,7 +266,7 @@ const char index_html[] PROGMEM = R"rawliteral(
 // Web Server Route Handlers
 // ---------------------------------------------------------
 void handleRoot() {
-  server.send(200, "text/html", index_html);
+  server.send_P(200, "text/html", index_html);
 }
 
 void handleConnect() {
